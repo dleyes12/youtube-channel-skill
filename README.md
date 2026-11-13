@@ -1,6 +1,6 @@
 # The YouTube Channel Skill 📺
 
-**6 Claude skills that take the busywork off your YouTube channel.** Free.
+**9 Claude skills for your YouTube channel: run a faceless animation channel, find where viewers leave, cut Shorts, and write titles, chapters and replies.** Free.
 
 Built by [@dylanleyes.ai](https://www.instagram.com/dylanleyes.ai/).
 
@@ -13,7 +13,18 @@ Built by [@dylanleyes.ai](https://www.instagram.com/dylanleyes.ai/).
 | **yt-chapters** | Chapters YouTube accepts + a ready-to-paste description, for one video or a whole batch |
 | **yt-comments** | Sorts your comments, drafts replies in your voice, and pulls out video ideas |
 
-All 6 share one folder (`channel/`) in your project, so each skill builds on what the others found.
+### 🎬 Run a faceless animation channel
+| Skill | What it does |
+| --- | --- |
+| **animation-director** | Start here for an animated channel. Sets your look, voice and format once, then takes each topic from idea to finished video |
+| **animation-script** | Researches the topic (every fact with a source) and writes the narration + a scene plan |
+| **animation-render** | Adds a voiceover, times every scene to it, animates the scenes in code (titles, counters, lists, comparisons, timelines, quotes, images) with captions, and renders the MP4, 16:9 or 9:16 |
+
+Then `yt-shorts` cuts the Shorts and `yt-packaging` writes the titles. Give it one topic: **"Make an animated video about why the Titanic sank."**
+
+The animation is code-made motion graphics (made with [Remotion](https://www.remotion.dev)), not 3D film animation. The voice is a free text-to-speech voice or your own recording.
+
+All skills share one folder (`channel/`) in your project, so each builds on what the others found.
 
 **What it doesn't do:** it never uploads, publishes or replies by itself. It drafts and prepares; you click publish in YouTube Studio. Claude reads your transcripts and your analytics exports; it doesn't watch the video.
 
@@ -33,7 +44,7 @@ Or with the skills CLI:
 ```
 npx skills add dleyes12/youtube-channel-skill
 ```
-Needs Python. The first time, Claude installs `youtube-transcript-api` and `yt-dlp` (for transcripts). Cutting Shorts needs `ffmpeg`.
+Needs Python and ffmpeg (and Node.js for the animation skills). The first time, Claude installs `youtube-transcript-api` and `yt-dlp` (transcripts) and `edge-tts` (the free voice). Remotion is free for individuals and companies of up to 3 people; larger companies need a Remotion license.
 
 ### Claude.ai (web / desktop app)
 1. Download the zips from `dist/` (one per skill)
@@ -41,7 +52,7 @@ Needs Python. The first time, Claude installs `youtube-transcript-api` and `yt-d
 3. Turn on code execution so the scripts can run. Without it, paste transcripts and numbers in yourself.
 
 ## Use it
-Say **"Run my YouTube channel"** (or "use the channel director"). Or go straight to one job:
+Say **"Run my YouTube channel"** or **"Make an animated video about <topic>"**. Or go straight to one job:
 - "Here's my retention export for this video. Where do viewers leave?"
 - "Turn this video into 4 Shorts." (attach the file)
 - "Write 10 titles for this video: <link>"

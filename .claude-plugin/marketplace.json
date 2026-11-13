@@ -5,7 +5,7 @@
     {
       "name": "youtube-channel",
       "source": "./",
-      "description": "6 Claude skills that take the busywork off a YouTube channel: retention drop-offs, Shorts, titles, chapters and comment replies.",
+      "description": "9 Claude skills for YouTube: run a faceless animation channel (script, animation in code, voiceover, render), plus retention drop-offs, Shorts, titles, chapters and comment replies.",
       "license": "MIT"
     }
   ]
