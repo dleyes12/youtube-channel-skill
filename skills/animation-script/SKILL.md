@@ -20,30 +20,25 @@ description: YouTube animation channel. Researches a topic and writes a faceless
 - Length: ~150 spoken words per minute. A 30 s Short ≈ 75 words; an 8 min video ≈ 1,200.
 
 ## 3. Scene plan (`channel/videos/<slug>/scenes.json`)
-One scene per 1–3 sentences (3–12 s each). Each scene has `"type"`, its on-screen content, and `"narration"` (exactly what the voice says during it). Scene types the template animates:
+One scene per 1–3 sentences (3–12 s each). Each scene has `"type"`, its visual content, and `"narration"` (exactly what the voice says during it).
 
-| type | Fields | Use it for |
-| --- | --- | --- |
-| `title` | `text`, `kicker`, `sub` | the opening title, chapter titles |
-| `number` | `value`, `prefix`, `suffix`, `label`, `kicker` | a big counting number ("2,224 people") |
-| `list` | `heading`, `items` (2–5) | reasons, steps, causes |
-| `compare` | `heading`, `left`/`right` `{title, points}` | before/after, A vs B |
-| `timeline` | `heading`, `events` `[{year, text}]` (2–5) | sequences, history |
-| `quote` | `text`, `by` | a real, sourced quote (types itself out) |
-| `icon` | `icon` (an emoji), `text`, `sub` | a character-style beat with a statement |
-| `image` | `src` (in `public/`), `caption`, `credit` | a photo or map the creator has rights to (slow zoom) |
+**Show what the voice says.** Whenever a line describes something *happening* (escaping, building, falling, growing, colliding, carrying), plan an `action` scene where the characters and props act it out, and write the choreography in plain words in `script.md` too ("Inky climbs out of the tank, slides to the drain, squeezes down the pipe, pops out in the sea"). Use the info types only for numbers, lists and comparisons. Never leave a character standing still under an action line.
 
-Top level: `"title"`, `"width"`/`"height"` (1920x1080 or 1080x1920), `"fps": 30`, `"theme"` (from the style file), `"captions": true`.
+Scene types (3D template; full field list and an example in the animation-render skill):
 
-```json
-{"title": "Why the Titanic sank", "width": 1920, "height": 1080, "fps": 30, "theme": {"accent": "#f4a259"},
- "scenes": [
-  {"type": "title", "text": "Why the Titanic Sank", "sub": "April 15, 1912", "narration": "On April fifteenth, nineteen twelve..."},
-  {"type": "number", "value": "2224", "label": "people on board (about)", "narration": "About two thousand two hundred people were on board."}
- ]}
-```
+| type | Use it for |
+| --- | --- |
+| `action` | anything that happens: characters and props move along keyframes, camera follows |
+| `hero` / `title` | introducing the subject: one prop, camera glides around it |
+| `count` | a big number ("500 million neurons") with dots filling the space |
+| `compare` | two values side by side as 3D columns |
+| `parts` | a subject with up to 4 labeled facts |
+| `globe` | where in the world |
+| `timeline` | a sequence of dates |
 
-Vary the scene types: never more than two of the same type in a row.
+Props available: octopus, tank, pipe, sea, rock, seaweed, box, globe, coin, gear, rocket, shell, shellHalves, brain. If the story needs a character or object that isn't there (a dog, a bridge, a ship), say so in the plan: animation-render builds it from simple 3D shapes.
+
+Vary the scene types: never more than two of the same type in a row. Open with an `action` or `hero` shot, not a text card.
 
 ## 4. Hand-off
 `script.md`: the facts table, the narration, the scene list (n, type, on-screen text, narration), word count and estimated length. The creator approves it before `animation-render` runs.

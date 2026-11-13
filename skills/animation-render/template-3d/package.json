@@ -1,0 +1,20 @@
+{
+  "name": "animation-channel-video-3d",
+  "private": true,
+  "description": "Faceless 3D explainer made in code (three.js inside Remotion). Scenes come from public/scenes.json.",
+  "scripts": {
+    "preview": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx Video out/video.mp4 --gl=angle",
+    "still": "remotion still src/index.jsx Video out/still.png --frame=60 --gl=angle"
+  },
+  "dependencies": {
+    "@react-three/drei": "9.122.0",
+    "@react-three/fiber": "8.18.0",
+    "@remotion/cli": "4.0.543",
+    "@remotion/three": "4.0.543",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.543",
+    "three": "0.170.0"
+  }
+}

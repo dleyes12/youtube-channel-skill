@@ -18,11 +18,11 @@ Built by [@dylanleyes.ai](https://www.instagram.com/dylanleyes.ai/).
 | --- | --- |
 | **animation-director** | Start here for an animated channel. Sets your look, voice and format once, then takes each topic from idea to finished video |
 | **animation-script** | Researches the topic (every fact with a source) and writes the narration + a scene plan |
-| **animation-render** | Adds a voiceover, times every scene to it, animates the scenes in code (titles, counters, lists, comparisons, timelines, quotes, images) with captions, and renders the MP4, 16:9 or 9:16 |
+| **animation-render** | Adds a voiceover, times every scene to it, animates it in 3D (clay-style characters and props that act out the story, moving camera) with captions, and renders the MP4, 16:9 or 9:16 |
 
 Then `yt-shorts` cuts the Shorts and `yt-packaging` writes the titles. Give it one topic: **"Make an animated video about why the Titanic sank."**
 
-The animation is code-made motion graphics (made with [Remotion](https://www.remotion.dev)), not 3D film animation. The voice is a free text-to-speech voice or your own recording.
+The animation is made in code: a bright 3D-explainer look with three.js inside [Remotion](https://www.remotion.dev) (or a flat motion-graphics look). It is not Pixar-level film animation. The voice is a free text-to-speech voice or your own recording.
 
 All skills share one folder (`channel/`) in your project, so each builds on what the others found.
 
