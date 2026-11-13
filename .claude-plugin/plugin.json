@@ -1,0 +1,9 @@
+{
+  "name": "youtube-channel",
+  "description": "The YouTube Channel skill pack: a channel director plus retention analysis (the exact second viewers leave), Shorts cutting, titles and thumbnail text, chapters and descriptions, and comment replies. Drafts everything; you publish.",
+  "version": "1.0.0",
+  "author": { "name": "Dylan Leyes" },
+  "homepage": "https://www.instagram.com/dylanleyes.ai/",
+  "license": "MIT",
+  "keywords": ["youtube", "retention", "shorts", "titles", "chapters", "comments", "creator"]
+}

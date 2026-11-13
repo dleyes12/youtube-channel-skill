@@ -1,0 +1,12 @@
+{
+  "name": "youtube-channel-skill",
+  "owner": { "name": "Dylan Leyes" },
+  "plugins": [
+    {
+      "name": "youtube-channel",
+      "source": "./",
+      "description": "6 Claude skills that take the busywork off a YouTube channel: retention drop-offs, Shorts, titles, chapters and comment replies.",
+      "license": "MIT"
+    }
+  ]
+}
